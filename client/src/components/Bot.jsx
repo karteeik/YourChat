@@ -21,9 +21,12 @@ const Bot = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:1900/bot/v1/message", {
-        text: input,
-      });
+      const res = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}/bot/v1/message`,
+        {
+          text: input,
+        },
+      );
 
       setMessages((prev) => [
         ...prev,
