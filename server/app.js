@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://your-chat-frontend.onrender.com/",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   }),
 );
