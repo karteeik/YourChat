@@ -1,0 +1,14 @@
+import mongoose from "mongoose";
+
+const botSchema = mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true },
+);
+
+const Bot = mongoose.model("Bot", botSchema);
+export default Bot;
